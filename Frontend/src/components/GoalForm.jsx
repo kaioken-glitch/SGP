@@ -86,14 +86,12 @@ export default function Goals() {
           goals.map(goal => (
             <div
               key={goal.id}
-              className="goalCard bg-black/60 rounded-lg p-4 flex flex-col md:flex-row 
-              md:items-center md:justify-between border border-gray-700 hover:bg-black/70 
-              transition-colors duration-200"
+              className="goalCard bg-black/60 rounded-lg p-4 flex flex-col gap-4 sm:gap-0 sm:flex-col md:flex-row md:items-center md:justify-between border border-gray-700 hover:bg-black/70 transition-colors duration-200 w-full"
             >
-              <div>
-                <div className="font-semibold text-lg flex items-center">
-                  <MdGpsFixed className="inline-block mr-2 text-[#e14546]" />
-                  {goal.name}
+              <div className="flex flex-col gap-1 w-full md:w-auto">
+                <div className="font-semibold text-base sm:text-lg flex items-center break-words">
+                  <MdGpsFixed className="inline-block mr-2 text-[#e14546] text-lg sm:text-xl" />
+                  <span className="truncate max-w-[180px] sm:max-w-none">{goal.name}</span>
                 </div>
                 <div className="text-xs text-gray-400">
                   {goal.category} &middot; Target: $
@@ -103,19 +101,21 @@ export default function Goals() {
                   Deadline: {goal.deadline}
                 </div>
               </div>
-              <div className="flex flex-col items-end mt-2 md:mt-0">
-                <span className="text-sm">
-                  Saved: <span className="font-bold">$
-                    {(goal.savedAmount !== undefined && goal.savedAmount !== null ? Number(goal.savedAmount).toLocaleString() : '0')}
+              <div className="flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-end gap-2 mt-2 md:mt-0 w-full md:w-auto">
+                <div className="flex flex-col items-start sm:items-end w-1/2 sm:w-auto">
+                  <span className="text-sm">
+                    Saved: <span className="font-bold">$
+                      {(goal.savedAmount !== undefined && goal.savedAmount !== null ? Number(goal.savedAmount).toLocaleString() : '0')}
+                    </span>
                   </span>
-                </span>
-                <span className="text-xs text-gray-400">
-                  {goal.targetAmount && goal.savedAmount !== undefined && goal.savedAmount !== null && goal.targetAmount !== 0
-                    ? Math.round((Number(goal.savedAmount) / Number(goal.targetAmount)) * 100)
-                    : 0
-                  }% complete
-                </span>
-                <div className="flex gap-2 mt-2">
+                  <span className="text-xs text-gray-400">
+                    {goal.targetAmount && goal.savedAmount !== undefined && goal.savedAmount !== null && goal.targetAmount !== 0
+                      ? Math.round((Number(goal.savedAmount) / Number(goal.targetAmount)) * 100)
+                      : 0
+                    }% complete
+                  </span>
+                </div>
+                <div className="flex gap-2 mt-0 sm:mt-2 w-1/2 sm:w-auto justify-end">
                   <button
                     className="p-2 rounded bg-[#e14546] text-white hover:bg-[#b32c2d] transition-colors"
                     onClick={() => setEditGoal(goal)}
