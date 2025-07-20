@@ -4,7 +4,7 @@ A modern React web application for managing and tracking personal savings goals.
 
 ## Preview
 
-![Smart Goal Planner Preview](../Frontend/src/assets/previewimage.png)
+![Smart Goal Planner Preview](./Frontend/src/assets/previewimage.png)
 - <small>This is a preview of the Smart Goal Planner application Dashboard, showcasing its clean and modern UI.</small>
 
 ## Project Description
