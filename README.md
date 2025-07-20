@@ -55,7 +55,8 @@ Frontend/
 │   └── main.jsx
 ├── db.json                   # Persistent data storage (JSON Server)
 ├── package.json
-└── README.md
+├── vite.config.js            # Vite configuration
+README.md
 ```
 
 ## Implementation Summary
