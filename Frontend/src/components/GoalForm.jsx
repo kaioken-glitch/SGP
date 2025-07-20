@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { MdEdit, MdDelete, MdGpsFixed } from 'react-icons/md'
 import GoalCard from './GoalCard'
 
-const API_URL = 'http://localhost:3001/goals'
+const API_URL = 'https://sgp-backend-8fvy.onrender.com/goals'
 
 
 export default function Goals() {

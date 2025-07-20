@@ -53,10 +53,12 @@ Frontend/
 │   ├── App.css
 │   ├── index.css
 │   └── main.jsx
-├── db.json                   # Persistent data storage (JSON Server)
 ├── package.json
 ├── vite.config.js            # Vite configuration
 README.md
+Backend/
+└── db.json                   # Persistent data storage (JSON Server)
+└── package.json
 ```
 
 ## Implementation Summary
@@ -74,6 +76,67 @@ README.md
 - Clean, simple, and responsive UI suitable for a school project
 - Demonstration of React best practices and integration with a REST API
 - All code and data structures are organized for clarity and easy grading
+
+## Backend Setup Manual (JSON Server)
+
+### Local Development
+
+1. **Install JSON Server**
+   - In your project directory, run:
+     ```bash
+     npm install json-server --save-dev
+     ```
+   - Or globally (optional):
+     ```bash
+     npm install -g json-server
+     ```
+
+2. **Prepare db.json**
+   - Ensure your `db.json` file is at the project root (or as referenced in your scripts).
+   - Example structure:
+     ```json
+     {
+       "goals": []
+     }
+     ```
+
+3. **Add a start script (optional but recommended)**
+   - In your `package.json` scripts section:
+     ```json
+     "scripts": {
+       ...,
+       "json-server": "json-server --watch db.json --port 3001"
+     }
+     ```
+
+4. **Start the backend server**
+   - Run:
+     ```bash
+     npm run json-server
+     ```
+   - The API will be available at `http://localhost:3001/goals`
+
+### Deployment (e.g., Render)
+
+1. **Deploy as a Web Service**
+   - Push your code (including `db.json` and `package.json`) to a Git repo.
+   - On Render, create a new Web Service from your repo.
+   - Set the start command to:
+     ```bash
+     npx json-server --watch db.json --port 10000
+     ```
+     (Choose a port Render allows, e.g., 10000)
+   - Set the build command to `npm install`.
+
+2. **Update Frontend API URL**
+   - In your React app, set the API URL to your Render backend URL, e.g.:
+     ```js
+     const API_URL = 'https://your-backend.onrender.com/goals';
+     ```
+   - Use environment variables for local/production switching if needed.
+
+3. **Data Persistence**
+   - All changes (POST, PUT, DELETE) will be saved in `db.json` on the server.
 
 ---
 
