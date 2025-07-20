@@ -1,4 +1,4 @@
-# <img src="./Frontend/src/assets/previewimage.png" alt="Smart Goal Planner Logo" width="50" height="50"> Smart Goal Planner
+# <img src="./Frontend/src/assets/logo.svg" alt="Smart Goal Planner Logo" width="50" height="50"> Smart Goal Planner
 
 A modern React web application for managing and tracking personal savings goals. This project demonstrates core React concepts, persistent CRUD operations, and a clean, responsive UI for a school assignment.
 
