@@ -1,0 +1,22 @@
+{
+  "goals": [
+    {
+      "name": "Gaming Monitor",
+      "targetAmount": 350,
+      "savedAmount": 50,
+      "category": "Electronics",
+      "deadline": "2025-09-20",
+      "createdAt": "2025-07-20T07:35:14.258Z",
+      "id": 1
+    },
+    {
+      "name": "Dell Optiplex 7060",
+      "targetAmount": 180,
+      "savedAmount": 20,
+      "category": "Electronics",
+      "deadline": "2025-09-21",
+      "createdAt": "2025-07-20T07:37:24.745Z",
+      "id": 2
+    }
+  ]
+}
