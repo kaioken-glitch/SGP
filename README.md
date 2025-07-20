@@ -35,7 +35,7 @@ The app is designed to showcase React fundamentals (state, props, effects, forms
 - Vite (build tool)
 - Tailwind CSS (styling)
 - JSON Server (mock REST API)
-- Chart.js (analytics visualization)
+- Chart.js (analytics visualization) to be implemented
 - JavaScript (ES6+)
 
 ## File Structure
